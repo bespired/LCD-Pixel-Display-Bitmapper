@@ -1,0 +1,62 @@
+<html>
+<head>
+	<link rel="apple-touch-icon" href="/icon.png"/>
+	<link rel="apple-touch-startup-image" href="/startup.png">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	
+	<script src="cabin/font.js" ></script>
+	<script src="js/jquery.js" ></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	
+	<script src="js/dots.js" ></script>
+	<script src="js/ui.js" ></script>
+
+	<style>
+	body {  font-family:'Cabin-Regular',Sans-Serif; font-size: 18px}
+	
+	.box1{ width: 40px; height: 40px; background-color: black; position: absolute; border:1px solid black; }
+	.box0{ width: 40px; height: 40px; background-color: white; position: absolute; border:1px solid gray; }
+	
+	</style>
+	<script>
+
+	var can;
+	var ctx;
+	clearBuffer();
+		
+	$(document).ready(function() {
+		
+		can = document.getElementById('canvas');
+		ctx = can.getContext('2d');
+	
+		ui_setup();
+	
+		var img = new Image();
+		img.onload = function(){
+		    can.width  = img.width;
+		    can.height = img.height;
+		    ctx.drawImage( img, 0, 0, img.width, img.height );
+		    
+		    bit2Byte();
+		}
+		img.src = 'baby.png';
+	
+	
+    });
+	
+	
+	</script>
+</head>
+<body>
+<div id="gui">
+	<input type="number" id="width"  style="width:40px" value="96"/> x
+	<input type="number" id="height" style="width:40px" value="65"/>
+	<button id="bprint" >Digits</button>
+	<input type="file" name="fileSelect" id="fileSelect">
+</div>
+<br>
+<canvas id="canvas"></canvas>
+<br>
+<div id="zoom"></div>
+</body>
