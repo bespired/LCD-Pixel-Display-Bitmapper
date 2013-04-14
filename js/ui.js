@@ -5,7 +5,7 @@
 function ui_setup(){
 
 	document.getElementById('fileSelect').addEventListener('change', handleFileSelect, false );
-	document.getElementById('bprint').addEventListener('click',  arduinoArray, false );
+	document.getElementById('bprint').addEventListener('click',  toArduinoArray, false );
 		
 }
 
