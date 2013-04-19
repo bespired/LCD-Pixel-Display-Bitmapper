@@ -4,6 +4,8 @@ LCD-Pixel-Display-Bitmapper
 
 Small javascript paint program to create small bitmaps ( 84x48 pixels by default ).
 
+http://i49.tinypic.com/2q19jfd.png
+
 Draw pixels, lines, squares and circles with a toolbox interface. ( fill and text not implemented yet ).
 Load and Dither any image from your disk.
 
